@@ -2,19 +2,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-canvas {
-    background-color: #111;
 }
 
 body {
-    background-color: #191919;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
-    min-height: 100vh;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#scoreText {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+#gameBoard {
+    border: 3px solid #2c3e50;
+    border-radius: 10px;
+    background: #000;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+#resetBtn {
+    background: #e74c3c;
     color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#resetBtn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#resetBtn:active {
+    transform: translateY(0);
+}
+
+.instructions {
+    margin-top: 15px;
+    color: #0da0ab;
+    font-style: italic;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #gameBoard {
+        width: 300px;
+        height: 300px;
+    }
+
+    #scoreText {
+        font-size: 1.2em;
+    }
+}
+
+#resetBtn {
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #207a0b;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: #45a049;
 }

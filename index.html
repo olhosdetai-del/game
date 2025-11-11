@@ -2,15 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">7
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
     <link rel="stylesheet" href="css/stely.css">
-    <title>game</title>
 </head>
 <body>
-    <canvas width="600" height="600">
+    <div class="game-container">
+        <h1>Jogo da Cobrinha</h1>
+        <div id="scoreText">Pontuação: 0</div>
+        <canvas id="gameBoard" width="600" height="600"></canvas>
+        <div class="controls">
+            <button id="resetBtn">Reiniciar Jogo</button>
+        </div>
+        
+    </div>
 
-    </canvas>
-    
     <script src="js/script.js"></script>
 </body>
 </html>
